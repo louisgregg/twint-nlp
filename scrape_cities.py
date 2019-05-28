@@ -4,19 +4,19 @@ import twint_to_db
 import sys # for command line argument parsing
 import numpy as np # for creation of a an array of ones
 
-'''
+"""
 -----------------------
 Scrape a pre-defined list of cities for a keyword using twint since yesterday. 
 If run using the keyword 'test', i.e:
-python3.7 scrape_cities.py test
+python3.7 scrape_cities.py --test
 then the scraping limit will be set to the minimum value (20) for testing. 
 Otherwise no limit will be set on the number of scrapes. 
 -----------------------
-'''
+"""
 
 # a function to construct filenames for dataframe storage
 def construct_filename(row):
-	filename = './'+row['location_name']+'_'+row['searchterm']+'_'+str(row['since'])+'_'+str(row['until']+'.pkl')
+	filename = './'+row['location_name']+'_'+row['searchterm']+'_'+str(row['since'])+'_'+str(row['until'])+'.pkl'
 	return(filename)
 
 def main(test=False):
@@ -57,8 +57,13 @@ def main(test=False):
 
 
 if __name__ == '__main__':
-	print(__doc__)
-	if str(sys.argv[1]) == 'test':
+	if len(sys.argv)==2 and str(sys.argv[1])=='--help':
+		print("To scrape a limit of 20 tweets per line run: ")
+		print("python3 scrape_cities.py --test")
+
+	elif len(sys.argv)==2 and str(sys.argv[1]) == '--test':
+		print("Scraping 20 tweets per city as a test.")
 		main(test=True)
+
 	else:
 		main()

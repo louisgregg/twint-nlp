@@ -1,0 +1,9 @@
+# ignore everything
+*
+# but not these files
+!dataframe_test.py
+!get_gps.py
+!.gitignore
+!README.md
+!scrape_cities.py
+!twint_to_db.py

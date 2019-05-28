@@ -100,8 +100,6 @@ def test():
 	# write newly updated dataframe to the file. 
 	write_dataframe_file(local_dataframe, local_dataframe_path)
 
-
-# TODO	: Define main function. Write call to main in scrape_cities.py setup environment and cronjob server side. 
 def main(searchterm, geo, since, until, limit, filepath):
 	# scrape new data
 	scraped_dataframe = scrape_into_dataframe(searchterm, geo, since=since, until=until, limit=limit)

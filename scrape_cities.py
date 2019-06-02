@@ -1,18 +1,9 @@
+#!/home/f/fi/fin/Projects/twint-nlp/twint-nlp-venv/bin/python3.7
 import pandas as pd
 from datetime import date, timedelta
 import twint_to_db
 import sys # for command line argument parsing
 import numpy as np # for creation of a an array of ones
-
-"""
------------------------
-Scrape a pre-defined list of cities for a keyword using twint since yesterday. 
-If run using the keyword 'test', i.e:
-python3.7 scrape_cities.py --test
-then the scraping limit will be set to the minimum value (20) for testing. 
-Otherwise no limit will be set on the number of scrapes. 
------------------------
-"""
 
 # a function to construct filenames for dataframe storage
 def construct_filename(row):

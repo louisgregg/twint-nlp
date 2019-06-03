@@ -1,4 +1,3 @@
-#!/home/f/fi/fin/Projects/twint-nlp/twint-nlp-venv/bin/python3.7
 import pandas as pd
 from datetime import date, timedelta
 import twint_to_db

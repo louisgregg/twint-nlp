@@ -1,4 +1,3 @@
-#!/home/f/fi/fin/Projects/twint-nlp/twint-nlp-venv/bin/python3.7
 """ Code to extract tweets from twitter and update local database """
 
 # connect to main database (MySQL or import from CSV or whatever)

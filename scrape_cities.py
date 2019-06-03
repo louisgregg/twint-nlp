@@ -6,7 +6,7 @@ import numpy as np # for creation of a an array of ones
 
 # a function to construct filenames for dataframe storage
 def construct_filename(row):
-	filename = './'+row['location_name']+'_'+row['searchterm']+'_'+str(row['since'])+'_'+str(row['until'])+'.pkl'
+	filename = './'+row['location_name']+'_'+row['searchterm']+'.pkl'
 	return(filename)
 
 def main(test=False):
